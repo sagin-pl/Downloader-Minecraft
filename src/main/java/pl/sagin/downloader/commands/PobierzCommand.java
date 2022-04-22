@@ -27,6 +27,12 @@ public class PobierzCommand implements CommandExecutor {
             Player player = (Player) sender;
 
 
+            if (args.length<1 || !args[0].contains("https") &&
+                    !args[0].contains("video")) {
+                player.sendMessage(ChatColor.RED + "Komenda musi zawierać url Do tiktoka. " + "poprawne użycie: " + ChatColor.GOLD + "" + ChatColor.BOLD + "/pobierz [url]");
+                return false;
+            }
+
             if (args[0].contains("tiktok") && args[0].contains("video") && args[0].contains("https"))
             {
 
@@ -52,6 +58,13 @@ public class PobierzCommand implements CommandExecutor {
                 ytandp(args, player);
                 return false;
 
+            }
+
+
+            //https://pl.pornhub.com/view_video.php?viewkey=ph5ff70c4f4a3e3
+            if (args[0].contains("pornhub") && args[0].contains("video") && args[0].contains("https")) {
+                ytandp(args, player);
+                return false;
             }
             return false;
         } else {
