@@ -1,0 +1,13 @@
+name: Downloader
+version: '1.0'
+main: pl.sagin.downloader.Downloader
+api-version: 1.18
+authors: [ foksureq, szurag, onhq, Adzik ]
+description: Plugin sluzacy do pobierania tikitokuf
+website: https://mc.sagin.pl
+commands:
+  pobierz:
+    aliases:
+      - tiktok
+      - instagram
+      - youtube
