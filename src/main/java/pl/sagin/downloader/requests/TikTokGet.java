@@ -61,6 +61,25 @@ public class TikTokGet {
         } else {
             int percentage = Integer.parseInt(kox.toString()) + in;
 
+            if (percentage < 10) {
+                player.sendMessage(ChatColor.AQUA + "(=---------) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 20) {
+                player.sendMessage(ChatColor.AQUA + "(==--------) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 30) {
+                player.sendMessage(ChatColor.AQUA + "(===-------) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 40) {
+                player.sendMessage(ChatColor.AQUA + "(====------) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 50) {
+                player.sendMessage(ChatColor.AQUA + "(=====-----) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 60) {
+                player.sendMessage(ChatColor.AQUA + "(======----) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 70) {
+                player.sendMessage(ChatColor.AQUA + "(=======---) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 80) {
+                player.sendMessage(ChatColor.AQUA + "(========--) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 90) {
+                player.sendMessage(ChatColor.AQUA + "(=========-) " + ChatColor.BOLD + "" + percentage + "%");
+            }
         }
 
 

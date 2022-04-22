@@ -55,6 +55,25 @@ public class YoutubeGet {
             Random random = new Random();
             percentage = random.nextInt(percentage+10) + percentage;
 
+            if (percentage < 10) {
+                player.sendMessage(ChatColor.AQUA + "(=---------) " + ChatColor.BOLD + "" + percentage + "%");
+            }else if (percentage < 20) {
+                player.sendMessage(ChatColor.AQUA + "(==--------) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 30) {
+                player.sendMessage(ChatColor.AQUA + "(===-------) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 40) {
+                player.sendMessage(ChatColor.AQUA + "(====------) " + ChatColor.BOLD + "" + percentage + "%");
+            }else if (percentage < 50) {
+                player.sendMessage(ChatColor.AQUA + "(=====-----) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 60) {
+                player.sendMessage(ChatColor.AQUA + "(======----) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 70) {
+                player.sendMessage(ChatColor.AQUA + "(=======---) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 80) {
+                player.sendMessage(ChatColor.AQUA + "(========--) " + ChatColor.BOLD + "" + percentage + "%");
+            } else if (percentage < 90) {
+                player.sendMessage(ChatColor.AQUA + "(=========-) " + ChatColor.BOLD + "" + percentage + "%");
+            }
             TimeUnit.SECONDS.sleep(3);
             YoutubeGet.youtubeGet(uurl, player, percentage);
         }
