@@ -1,7 +1,0 @@
-pl\sagin\downloader\commands\PobierzCommand.class
-pl\sagin\downloader\requests\TikTokGet.class
-pl\sagin\downloader\Downloader.class
-pl\sagin\downloader\commands\DayCommand.class
-pl\sagin\downloader\requests\YoutubeGet.class
-pl\sagin\downloader\requests\TikTokRequest.class
-pl\sagin\downloader\requests\YoutubeRequest.class
