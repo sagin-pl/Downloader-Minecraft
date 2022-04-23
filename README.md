@@ -27,7 +27,7 @@ Plugin do serwerów minecraft służący do pobierania filmów z różnych platf
 
 ## Demo
 
-https://cdn.discordapp.com/attachments/806999211911938088/967124824201760808/demo.gif
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 
 
