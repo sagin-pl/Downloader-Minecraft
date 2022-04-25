@@ -1,26 +1,30 @@
-
 # Downloader-Minecraft
+[![Release](https://img.shields.io/github/v/release/sagin-pl/Downloader-Minecraft)](https://github.com/sagin-pl/Downloader-Minecraft/releases)
+[![Project](https://img.shields.io/badge/project-SAGIN--PL-green)](https://github.com/sagin-pl)
 
-Plugin do serwerów minecraft służący do pobierania filmów z różnych platfrom.
+Downloader to aplikacja na różne platformy umożliwiająca pobieranie zdjęć i filmów z popularnych platform takich jak Instagram, TikTok, Youtube.
 
-## Features
+#### SPIS TREŚCI
+- [Wymagania](#wymagania)
+- [Funkcje](#funkcje)
+- [Instalacja](#instalacja)
+- [Użycie](#użycie)
+- [Autorzy](#autorzy)
 
-- Otrzymywanie linku z filmem na chacie w grze
+#### WYMAGANIA
+- Server Minecraft na silniku Spigot
 
+#### FUNKCJE
+- Pobieranie filmu lub zdjęcia
 
-## Usage
+#### INSTALACJA
+Aby zainstalować plugin na swoim serwerze, należy pobrać plik .jar z zakładki [RELEASE](https://github.com/sagin-pl/Downloader-Minecraft/releases) i wrzucić go do folderu "plugins" w plikach serwerowych
 
-**tiktok**
-```
-/pobierz [link]
-```
+# Użycie
+##### TIKTOK / INSTAGRAM
+```/pobierz <URL>```
+##### YOUTUBE I INNE
+```/pobierz <URL> <hd/best>```
 
-**youtube**
-
-```
-/pobierz [link] [best/hd]
-```
-## Authors
-
-- [@FoskureK](https://github.com/FoksureK)
-
+# Autorzy
+- **[@FoksureK](https://github.com/FoksureK)**
