@@ -2,6 +2,8 @@ package pl.sagin.downloader.requests;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URI;
@@ -13,43 +15,36 @@ import java.util.concurrent.TimeUnit;
 
 public class YoutubeGet {
 
+    public YoutubeGet() {
+    }
+
     public static String youtubeGet(String uurl, Player player, int percentage) throws IOException, InterruptedException {
 
+
         HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(uurl))
-                .build();
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uurl)).build();
 
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
+        String[] parts = uurl.split("/");
 
-        String nig = response.body();
+        String sama = response.body();
 
-        boolean st = false;
-        StringBuilder str = new StringBuilder();
+        StringBuilder kox;
 
-        for (int i=0; i<nig.length(); i++)
-        {
-            if (nig.charAt(i) == ':' && !st) {
-                st = true;
-                i++;
-            }
+        sama = "[" + sama;
+        sama = sama + "]";
 
-            if (nig.charAt(i) == '}' && st) {
-                break;
-            }
+        JSONArray array = new JSONArray(sama);
+        JSONObject object = array.getJSONObject(0);
 
-            if (st)
-                str.append(nig.charAt(i));
+        kox = new StringBuilder(String.valueOf(object.get(parts[4])));
 
-        }
-
-        String ur = String.valueOf(str);
+        String ur = String.valueOf(kox);
 
         if (ur.contains("https")){
             player.sendMessage(ChatColor.AQUA + "(==========) " + ChatColor.BOLD + "100%");
-            player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "" + ur.substring(1,ur.length() - 1));
+            player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "" + ur);
         } else {
 
             Random random = new Random();

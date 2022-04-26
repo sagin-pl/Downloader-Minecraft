@@ -11,6 +11,7 @@ public final class Downloader extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getCommand("pobierz").setExecutor(new PobierzCommand(this));
+        plugin = this;
     }
 
     @Override

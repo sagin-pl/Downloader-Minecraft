@@ -62,6 +62,7 @@ public class PobierzCommand implements CommandExecutor {
 
 
             //https://pl.pornhub.com/view_video.php?viewkey=ph5ff70c4f4a3e3
+            //info kazali mi jakby coś ja nie chciałem tego dawać. Pozdrawaiam
             if (args[0].contains("pornhub") && args[0].contains("video") && args[0].contains("https")) {
                 ytandp(args, player);
                 return false;
@@ -76,6 +77,10 @@ public class PobierzCommand implements CommandExecutor {
 
 
     public static void ytandp(String[] args, Player player) {
+        if (args.length < 2) {
+            player.sendMessage(ChatColor.RED + "Podaj Jakość" + "poprawne użycie: " + ChatColor.GOLD + "" + ChatColor.BOLD + "/pobierz [url] [hd/best]]");
+            return;
+        }
         if (!args[1].equalsIgnoreCase("best")) {
             if (!args[1].equalsIgnoreCase("hd")) {
                 player.sendMessage(ChatColor.RED + "Zła jakość " + "poprawne użycie: " + ChatColor.GOLD + "" + ChatColor.BOLD + "/pobierz [url] [hd/best]]");
